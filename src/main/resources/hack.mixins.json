@@ -6,8 +6,7 @@
   "compatibilityLevel": "JAVA_17",
   "mixins": [
     "ServerLoginNetworkHandler_EarlySendPacket",
-    "ServerLoginNetworkHandler_SkipKeyPacket",
-    "ServerPlayNetworkHandler_HackMessageChain"
+    "ServerLoginNetworkHandler_SkipKeyPacket"
   ],
   "injectors": {
     "defaultRequire": 1

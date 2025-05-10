@@ -59,8 +59,8 @@ public class FabricProxyLite implements DedicatedServerModInitializer, IMixinCon
     @Override
     public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
         return mixinClassName.equals("one.oktw.mixin.hack.ServerLoginNetworkHandler_EarlySendPacket") && config.getHackEarlySend()
-                || mixinClassName.equals("one.oktw.mixin.hack.ServerLoginNetworkHandler_SkipKeyPacket") && config.getHackOnlineMode()
-                || mixinClassName.endsWith("HackMessageChain") && config.getHackMessageChain();
+            || mixinClassName.equals("one.oktw.mixin.hack.ServerLoginNetworkHandler_SkipKeyPacket") && config.getHackOnlineMode()
+            || mixinClassName.endsWith("HackMessageChain") && config.getHackMessageChain();
     }
 
     @Override

@@ -17,15 +17,13 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import static one.oktw.VelocityLib.PLAYER_INFO_CHANNEL;
 import static one.oktw.VelocityLib.PLAYER_INFO_PACKET;
 
-@SuppressWarnings("UnstableApiUsage")
 @Mixin(ServerLoginNetworkHandler.class)
 public class ServerLoginNetworkHandler_EarlySendPacket {
     @Shadow
     @Final
-    ClientConnection connection;
+	public ClientConnection connection;
     @Shadow
-    @Nullable
-    private GameProfile profile;
+    @Nullable GameProfile profile;
 
     @Inject(method = "onHello", at = @At(value = "HEAD"), cancellable = true)
     private void skipKeyPacket(LoginHelloC2SPacket packet, CallbackInfo ci) {
